@@ -1,0 +1,58 @@
+{
+    "resources": [
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/ZVMS_APP_VEHICULOS_PUERTO_SRV/metadata.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "view/BuscarVin.view.xml"
+        },
+        {
+            "name": "view/seleccion.view.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": "controller/BuscarVin.controller.js"
+        },
+        {
+            "name": "controller/utilities.js"
+        },
+        {
+            "name": "controller/seleccion.controller.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

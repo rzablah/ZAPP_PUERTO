@@ -1,0 +1,253 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZAPP_PUERTO_G6.controller.seleccion">
+	<App>
+	<pages>
+	    <Page xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" showHeader="true" title="Guía de Despacho Puerto" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress" id="__page1">
+	        <content>
+	            <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true" id="__toolbar1">
+	                <content>
+	                    <ToolbarSpacer width="" id="__spacer0"/>
+	                    <Button text="Generar Guía" type="Emphasized" icon="sap-icon://create" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress" id="__button0"/>
+	                    <Button text="Imprimir Guia" type="Emphasized" icon="sap-icon://print" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="__button1"/>
+	                    <Button text="Anular" type="Reject" icon="sap-icon://decline" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="__button2"/>
+	                    <Button text="Mostrar Todo" type="Transparent" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="__button3"/>
+	                    </content>
+	                <tooltip/>
+	                </Toolbar>
+	            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok" id="__bar0">
+	                <items>
+	                    <IconTabFilter icon="" iconColor="Default" text="Disponibles" count="2" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="__filter0">
+	                        <content>
+	                            <Table width="100%" noDataText="No data" mode="MultiSelect" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" id="__table0">
+	                                <infoToolbar/>
+	                                <headerToolbar>
+	                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true" id="__toolbar2">
+	                                        <content>
+	                                            <ToolbarSpacer width="" id="__spacer1"/>
+	                                            <SearchField placeholder="VIN (6 Ultimos digitos)" showSearchButton="true" visible="true" width="auto" id="__field0"/>
+	                                            <Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="__button4"/>
+	                                            </content>
+	                                        <tooltip/>
+	                                        </Toolbar>
+	                                    
+	                                </headerToolbar>
+	                                <columns>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column0">
+	                                        <header>
+	                                            <Text text="Embarque" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text1"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false" id="__column1">
+	                                        <header>
+	                                            <Text text="Nave" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text2"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false" id="__column2">
+	                                        <header>
+	                                            <Text text="Contador" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text3"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column3">
+	                                        <header>
+	                                            <Text text="Rut Cliente" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text4"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column4">
+	                                        <header>
+	                                            <Text text="Nombre Cliente" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text5"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column5">
+	                                        <header>
+	                                            <Text text="VIN" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text6"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column6">
+	                                        <header>
+	                                            <Text text="Marca" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" id="__text7"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column7">
+	                                        <header>
+	                                            <Text text="Modelo" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text8"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column8">
+	                                        <header>
+	                                            <Text text="Color" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text9"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    </columns>
+	                                <items>
+	                                    <ColumnListItem type="Active" id="__item0">
+	                                        <cells>
+	                                            <Text text="457300000" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text10"/>
+	                                            <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text11"/>
+	                                            <Text text="1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text12"/>
+	                                            <Text text="6587654-1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text13"/>
+	                                            <Text text="Diana Montenegro" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text14"/>
+	                                            <Text text="GJDBSKFY65443" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text15"/>
+	                                            <Text text="FORD" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text16"/>
+	                                            <Text text="ECOSSPORT" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text17"/>
+	                                            <Text text="Negro" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text18"/>
+	                                            </cells>
+	                                        
+	                                    </ColumnListItem>
+	                                    <ColumnListItem type="Active" id="__item1">
+	                                        <cells>
+	                                            <Text text="457300000" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text19"/>
+	                                            <Text text="Regular Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text20"/>
+	                                            <Text text="1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text21"/>
+	                                            <Text text="6587654-1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text22"/>
+	                                            <Text text="457300000" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text23"/>
+	                                            <Text text="KNFSHDL9865" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text24"/>
+	                                            <Text text="FORD" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text25"/>
+	                                            <Text text="ECOSSPORT" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text26"/>
+	                                            <Text text="Negro" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text27"/>
+	                                            </cells>
+	                                        
+	                                    </ColumnListItem>
+	                                    </items>
+	                                </Table>
+	                            
+	                        </content>
+	                        
+	                    </IconTabFilter>
+	                    <IconTabFilter icon="" iconColor="Default" text="Items selecconados" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false" id="__filter1">
+	                        <content>
+	                            <Table width="100%" noDataText="No data" mode="MultiSelect" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" id="__table1">
+	                                <infoToolbar/>
+	                                <headerToolbar>
+	                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true" id="__toolbar3">
+	                                        <content>
+	                                            <ToolbarSpacer width="" id="__spacer2"/>
+	                                            <SearchField placeholder="VIN (6 Ultimos digitos)" showSearchButton="true" visible="true" width="auto" id="__field1"/>
+	                                            <Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="__button5"/>
+	                                            </content>
+	                                        <tooltip/>
+	                                        </Toolbar>
+	                                    
+	                                </headerToolbar>
+	                                <columns>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column9">
+	                                        <header>
+	                                            <Text text="Embarque" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text29"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false" id="__column10">
+	                                        <header>
+	                                            <Text text="Nave" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text30"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false" id="__column11">
+	                                        <header>
+	                                            <Text text="Contador" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text31"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column12">
+	                                        <header>
+	                                            <Text text="Rut Cliente" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text32"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column13">
+	                                        <header>
+	                                            <Text text="Nombre Cliente" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text33"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" id="__column14">
+	                                        <header>
+	                                            <Text text="VIN" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text34"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column15">
+	                                        <header>
+	                                            <Text text="Marca" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" id="__text35"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column16">
+	                                        <header>
+	                                            <Text text="Modelo" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text36"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false" id="__column17">
+	                                        <header>
+	                                            <Text text="Color" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text37"/>
+	                                            
+	                                        </header>
+	                                        <footer/>
+	                                        </Column>
+	                                    </columns>
+	                                <items>
+	                                    <ColumnListItem type="Active" id="__item2">
+	                                        <cells>
+	                                            <Text text="457300000" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text38"/>
+	                                            <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text39"/>
+	                                            <Text text="1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text40"/>
+	                                            <Text text="6587654-1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text41"/>
+	                                            <Text text="Diana Montenegro" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text42"/>
+	                                            <Text text="GJDBSKFY65443" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text43"/>
+	                                            <Text text="FORD" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text44"/>
+	                                            <Text text="ECOSSPORT" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text45"/>
+	                                            <Text text="Negro" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" id="__text46"/>
+	                                            </cells>
+	                                        
+	                                    </ColumnListItem>
+	                                    
+	                                </items>
+	                                </Table>
+	                            
+	                        </content>
+	                        
+	                    </IconTabFilter>
+	                    </items>
+	                <content/>
+	                </IconTabBar>
+	            </content>
+	        <footer>
+	            <Bar design="Auto" id="__bar1">
+	                <contentLeft/>
+	                <contentMiddle/>
+	                <contentRight/>
+	                </Bar>
+	            
+	        </footer>
+	        <headerContent/>
+	        <subHeader/>
+	        <customHeader/>
+	        </Page>
+	</pages>
+	</App>
+</mvc:View>

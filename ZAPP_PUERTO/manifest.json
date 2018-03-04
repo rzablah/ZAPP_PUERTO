@@ -1,0 +1,182 @@
+{
+    "_version": "1.5.0",
+    "sap.app": {
+        "id": "ZAPP_PUERTO_G6",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "sourceTemplate": {
+            "id": "servicecatalog.connectivityComponent",
+            "version": "0.0.0"
+        },
+        "dataSources": {
+            "ZVMS_APP_VEHICULOS_PUERTO_SRV": {
+                "uri": "/sap/opu/odata/sap/ZVMS_APP_VEHICULOS_PUERTO_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/ZVMS_APP_VEHICULOS_PUERTO_SRV/metadata.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "_version": "1.3.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.3.0",
+        "rootView": {
+            "viewName": "ZAPP_PUERTO_G6.view.BuscarVin",
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.30.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {},
+                "sap.ushell": {},
+                "sap.collaboration": {},
+                "sap.ui.comp": {},
+                "sap.uxap": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ZAPP_PUERTO_G6.i18n.i18n"
+                }
+            },
+            "": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "OneTime",
+                    "defaultCountMode": "Request"
+                },
+                "dataSource": "ZVMS_APP_VEHICULOS_PUERTO_SRV",
+                "preload": true
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "com.sap.build.standard.guiaEnPuerto.view",
+                "controlId": "App",
+                "clearTarget": false,
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": [
+                        "BusquedaVin"
+                    ]
+                }
+            },
+            "targets": {
+                "BusquedaVin": {
+                    "controlAggregation": "pages",
+                    "viewName": "BusquedaVin",
+                    "viewId": "BusquedaVin",
+                    "viewLevel": 2,
+                    "transition": "slide"
+                },
+                "seleccion": {
+                    "controlAggregation": "pages",
+                    "viewName": "seleccion",
+                    "viewId": "seleccion",
+                    "viewLevel": 3,
+                    "transition": "slide"
+                },
+                "GeneracionGuia": {
+                    "controlAggregation": "pages",
+                    "viewName": "GeneracionGuia",
+                    "viewId": "GeneracionGuia",
+                    "viewLevel": 4,
+                    "transition": "slide"
+                },
+                "Guia": {
+                    "controlAggregation": "pages",
+                    "viewName": "Guia",
+                    "viewId": "Guia",
+                    "viewLevel": 1,
+                    "transition": "slide"
+                }
+            },
+            "routes": [
+                {
+                    "pattern": "BusquedaVin/:context:",
+                    "name": "BusquedaVin",
+                    "target": [
+                        "BusquedaVin"
+                    ]
+                },
+                {
+                    "pattern": "",
+                    "name": "default",
+                    "target": [
+                        "BusquedaVin"
+                    ]
+                },
+                {
+                    "pattern": "seleccion/:context:",
+                    "name": "seleccion",
+                    "target": [
+                        "seleccion"
+                    ]
+                },
+                {
+                    "pattern": "GeneracionGuia/:context:",
+                    "name": "GeneracionGuia",
+                    "target": [
+                        "GeneracionGuia"
+                    ]
+                },
+                {
+                    "pattern": "Guia/:context:",
+                    "name": "Guia",
+                    "target": [
+                        "Guia"
+                    ]
+                }
+            ]
+        }
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/zapp_puerto",
+        "_version": "1.1.0"
+    }
+}

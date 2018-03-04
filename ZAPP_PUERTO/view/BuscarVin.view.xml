@@ -1,0 +1,74 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZAPP_PUERTO_G6.controller.BuscarVin" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form0">
+				        <sap.ui.layout.form:formContainers>
+				            <sap.ui.layout.form:FormContainer title="Title" id="__container0">
+				                <sap.ui.layout.form:formElements>
+				                    <sap.ui.layout.form:FormElement label="Nave" id="Lnave">
+				                        <sap.ui.layout.form:fields>
+				                            <Input width="100%" id="InpNave"/>
+				                        </sap.ui.layout.form:fields>
+				                    </sap.ui.layout.form:FormElement>
+				                    <sap.ui.layout.form:FormElement label="Embarque" id="LPuerto">
+				                        <sap.ui.layout.form:fields>
+				                            <ComboBox xmlns:sap.ui.core="sap.ui.core" items="{/ZVMS_RFC_READ_PUERTOSSet}" id="ComBPuerto">
+				                            	<items>
+	                                           
+	                                             <sap.ui.core:Item text="{Descrip}" enabled="true" key="{Vkorg}"/>
+	                                             </items>
+				                            </ComboBox>
+				                        </sap.ui.layout.form:fields>
+				                    </sap.ui.layout.form:FormElement>
+				                    <sap.ui.layout.form:FormElement xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Puerto" id="LPuerto_copy">
+				                        <sap.ui.layout.form:fields>
+				                            <ComboBox xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" items="{/ZVMS_RFC_READ_PUERTOSSet}" id="ComBPuerto_copy">
+				                                <items>
+				                                    <sap.ui.core:Item text="{Descrip}" enabled="true" key="{Vkorg}" id="__item2-ComBPuerto_copy-0"/>
+				                                    
+				                                </items>
+				                                
+				                            </ComboBox>
+				                            
+				                        </sap.ui.layout.form:fields>
+				                        
+				                    </sap.ui.layout.form:FormElement>
+				                    <sap.ui.layout.form:FormElement label="Canal de Distr." id="IDCanalDist">
+				                        <sap.ui.layout.form:fields>
+				                            <ComboBox xmlns:sap.ui.core="sap.ui.core" items="{/ZVMS_GET_CANAL_DISSet}" id="ComBCabalD">
+				                                <items>
+				                                    <sap.ui.core:Item text="{Vtext}" enabled="true" key="{Vtweg}"/>
+												</items>
+				                            </ComboBox>
+				                        </sap.ui.layout.form:fields>
+				                    </sap.ui.layout.form:FormElement>
+				                    <sap.ui.layout.form:FormElement label="Oficina de Ventas" id="IdLabOfVentas">
+				                        <sap.ui.layout.form:fields>
+				                            <ComboBox xmlns:sap.ui.core="sap.ui.core" items="{/ZVMS_RFC_GET_OF_VENTASSet}" id="__box0">
+				                                <items>
+				                                    <sap.ui.core:Item text="{Bezei}" enabled="true" key="{Vkbur}"/>
+				                                </items>
+				                            </ComboBox>
+				                        </sap.ui.layout.form:fields>
+				                    </sap.ui.layout.form:FormElement>
+				                </sap.ui.layout.form:formElements>
+				            </sap.ui.layout.form:FormContainer>
+				        </sap.ui.layout.form:formContainers>
+				        <sap.ui.layout.form:layout>
+				            <sap.ui.layout.form:ResponsiveGridLayout id="__layout0"/>
+				        </sap.ui.layout.form:layout>
+				        <sap.ui.layout.form:toolbar>
+				            <Toolbar width="100%" id="__toolbar1">
+				                <content>
+				                    <ToolbarSeparator id="__separator0"/>
+				                    <Button text="Buscar" width="100px" id="Button_Buscar" icon="sap-icon://search" type="Emphasized" press="_onButtonPress"/>
+				                </content>
+				            </Toolbar>
+				        </sap.ui.layout.form:toolbar></sap.ui.layout.form:Form>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
